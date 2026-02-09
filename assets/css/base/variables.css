@@ -1,0 +1,39 @@
+:root {
+  /* Typographie */
+  --font-base: system-ui, sans-serif;
+
+  --fs-h1: ;
+  --fs-h2: ;
+  --fs-h3: ;
+  --fs-h4: ;
+  --fs-h5: ;
+  --fs-h6: ;
+  --fs-p: ;
+
+
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fb;
+  --btn-hover: #0060ce;
+
+
+  /* Colors */
+  --color-primary: #0378ff;
+  --color-black: #000000;
+  --color-grey: #1e1e1e;
+  --color-white: #ffffff;
+
+
+  /* Espacements */
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+
+  
+  /* UI */
+  --radius-md: 0.5rem;
+  --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  /* Width */
+  --max-width: 1440px
+}

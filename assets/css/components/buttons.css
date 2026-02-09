@@ -1,0 +1,16 @@
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-base);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.btn:active {
+  opacity: 0.8;
+}
