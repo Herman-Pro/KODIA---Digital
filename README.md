@@ -1,0 +1,1 @@
+le logo doit avoir une taille largeur entre 300 a 400px et une hauteur proportionelle avec un fond transparent format PNG ou JPG.

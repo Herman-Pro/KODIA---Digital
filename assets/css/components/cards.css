@@ -1,5 +1,238 @@
-.card {
- padding: ;
- box-shadow: ;
- border-radius: ;
+/* ============================================================
+   CARDS — Composants cards réutilisables
+   Fichier : assets/css/components/cards.css
+
+   Deux variantes disponibles :
+   .icon-card            → icône gauche + texte droite
+   .icon-card--centered  → icône haut + titre centré
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   ICON CARD — base
+---------------------------------------------------------- */
+
+.icon-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: box-shadow var(--transition-base);
+}
+
+.icon-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.icon-card__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: var(--color-primary-50);
+  border-radius: var(--radius-md);
+}
+
+.icon-card__icon {
+  font-size: 1.25rem;
+  color: var(--color-primary-500);
+  display: flex;
+}
+
+.icon-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.icon-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.icon-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   MODIFICATEUR — ICON CARD CENTRÉE
+
+   Usage : <li class="icon-card icon-card--centered">
+   ============================================================ */
+
+.icon-card--centered {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+}
+
+.icon-card--centered .icon-card__icon-wrap {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-lg);
+}
+
+.icon-card--centered .icon-card__icon {
+  font-size: 1.5rem;
+}
+
+.icon-card--centered .icon-card__body {
+  align-items: center;
+}
+
+/* ============================================================
+   FEATURE ITEM — Argument avec checkmark + titre + description
+
+   Usage :
+   <li class="feature-item">
+     <div class="feature-item__header">
+       <i class="feature-item__icon">
+       <h3 class="feature-item__title">
+     <p class="feature-item__desc">
+
+   Utilisable dans : avantages, valeurs, features, étapes...
+   ============================================================ */
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-inline: var(--space-4);
+}
+
+/*
+  flex-direction: column → header (icône+titre) au-dessus,
+  description en dessous.
+  gap: --space-3 (12px) → espace entre header et description.
+  Volontairement plus petit que --space-6 — les deux sont liés.
+*/
+
+.feature-item__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/*
+  display: flex → icône et titre sur la même ligne.
+  align-items: center → icône centrée verticalement avec le titre.
+  gap: --space-2 (8px) → espace réduit entre icône et titre.
+  Ils forment une unité visuelle — trop d'espace les dissocierait.
+*/
+
+.feature-item__icon {
+  display: flex;
+  font-size: 1rem;
+  color: var(--color-primary-500);
+  flex-shrink: 0;
+}
+
+/*
+  color: --color-primary-500 → checkmark bleue.
+  flex-shrink: 0 → l'icône ne rétrécit pas si le titre est long.
+  display: flex → supprime l'espace résiduel des icônes inline.
+*/
+
+.feature-item__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.feature-item__desc {
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   INFO CARD — Card simple titre + texte, sans icône
+
+   Usage :
+   <li class="info-card">
+     <h3 class="info-card__title">Titre</h3>
+     <p class="info-card__text">Texte</p>
+   </li>
+
+   Utilisable dans : about, équipe, mission, valeurs...
+   ============================================================ */
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+/*
+  Même structure visuelle que .icon-card mais sans icône.
+  gap: --space-3 (12px) → titre et contenu sont liés.
+  background + border + radius → cohérence avec les autres cards du kit.
+*/
+
+.info-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.info-card__text {
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   VALUE LIST — Liste d'items avec checkmark inline
+
+   Usage :
+   <ul class="value-list" role="list">
+     <li class="value-list__item">
+       <i class="value-list__icon"></i>
+       Texte de la valeur
+     </li>
+   </ul>
+
+   Utilisable dans : valeurs, avantages courts, listes de features
+   ============================================================ */
+
+.value-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.value-list__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+}
+
+/*
+  display: flex → icône et texte sur la même ligne.
+  align-items: center → icône centrée verticalement avec le texte.
+  gap: --space-2 (8px) → espace serré, ils forment une unité.
+*/
+
+.value-list__icon {
+  display: flex;
+  font-size: 0.875rem;
+  color: var(--color-primary-500);
+  flex-shrink: 0;
 }

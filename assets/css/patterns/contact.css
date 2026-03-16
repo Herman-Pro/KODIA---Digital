@@ -1,0 +1,55 @@
+.contact{
+  background-color: var(--color-gray-100);
+}
+
+/* ----------------------------------------------------------
+   CONTACT INFO — Bloc d'informations de contact
+---------------------------------------------------------- */
+
+.contact-info-card {
+  background-color: var(--color-gray-100);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-self: flex-start;
+}
+
+.contact-info__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.contact-info__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/*
+  gap: --space-1 (4px) → label et valeur très proches.
+  "Email :" et "contact@kodia.fr" forment une unité — pas d'espace.
+*/
+
+.contact-info__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.contact-info__value {
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+}
+
+.contact-info__value--link {
+  color: var(--color-primary-500);
+  transition: color var(--transition-base);
+}
+
+.contact-info__value--link:hover {
+  color: var(--color-primary-600);
+}

@@ -1,39 +1,81 @@
 :root {
-  /* Typographie */
+  /* === TYPOGRAPHIE === */
   --font-base: system-ui, sans-serif;
 
-  --fs-h1: ;
-  --fs-h2: ;
-  --fs-h3: ;
-  --fs-h4: ;
-  --fs-h5: ;
-  --fs-h6: ;
-  --fs-p: ;
-
-
-  /* Background Colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f7fb;
-  --btn-hover: #0060ce;
-
-
-  /* Colors */
-  --color-primary: #0378ff;
-  --color-black: #000000;
-  --color-grey: #1e1e1e;
+  /* === COULEURS NEUTRES === */
   --color-white: #ffffff;
+  --color-grey-light: #eee;
+  --color-black: #000000;
+  --color-gray-900: #1e1e1e;
+  --color-gray-700: #374151;
+  /* ← AJOUT : texte secondaire */
+  --color-gray-400: #9ca3af;
+  /* ← AJOUT : texte atténué / placeholder */
+  --color-gray-200: #eef0f4;
+  --color-gray-100: #f5f7fb;
+  --color-gray-50: #f9fafb;
+  /* ← AJOUT : fond section alternée */
 
+  /* === COULEURS PRINCIPALES === */
+  --color-primary-500: #0378ff;
+  --color-primary-600: #0060ce;
+  --color-primary-50: #eff6ff;
+  /* ← AJOUT : fond léger (badges, hover bg) */
 
-  /* Espacements */
-  --space-sm: 0.75rem;
-  --space-md: 1.5rem;
-  --space-lg: 3rem;
+  /* === BORDURES === */
+  --color-border: #e5e7eb;
+  /* ← AJOUT : bordures légères */
 
-  
-  /* UI */
+  /* === ESPACEMENTS ===
+     Échelle ×4 basée sur 4px
+     Pourquoi cette échelle ? Standard industrie (Figma 8pt grid).
+     Chaque valeur = multiple de 4px → harmonie visuelle automatique.
+  */
+  --space-1: 0.25rem;
+  /*  4px */
+  --space-2: 0.5rem;
+  /*  8px */
+  --space-3: 0.75rem;
+  /* 12px */
+  --space-4: 1rem;
+  /* 16px */
+  --space-6: 1.5rem;
+  /* 24px */
+  --space-8: 2rem;
+  /* 32px */
+  --space-10: 2.5rem;
+  /* 40px */
+  --space-12: 3rem;
+  /* 48px */
+  --space-16: 4rem;
+  /* 64px */
+  --space-20: 5rem;
+  /* 80px */
+
+  /* On garde tes alias sémantiques — utiles pour la lecture rapide */
+  --space-xs: var(--space-2);
+  /* 8px  */
+  --space-sm: var(--space-3);
+  /* 12px */
+  --space-md: var(--space-6);
+  /* 24px */
+  --space-lg: var(--space-12);
+  /* 48px */
+
+  /* === UI === */
+  --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
-  --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --radius-lg: 0.75rem;
+  /* ← AJOUT : pour les cards */
 
-  /* Width */
-  --max-width: 1440px
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  /* === TRANSITIONS === */
+  --transition-base: 250ms ease;
+  
+
+  /* === Z-INDEX === */
+  --z-sticky: 200;
+  --z-dropdown: 100;
 }

@@ -1,0 +1,16 @@
+/* ----------------------------------------------------------
+   ABOUT — En-tête aligné à gauche
+---------------------------------------------------------- */
+.about {
+  background-color: var(--color-gray-100);
+}
+
+/* ----------------------------------------------------------
+   CTA BANNER — Bloc d'appel à l'action centré
+
+   Utilisable sur n'importe quelle page en bas de contenu.
+---------------------------------------------------------- */
+
+.cta-banner {
+  border-top: 1px solid var(--color-border);
+}

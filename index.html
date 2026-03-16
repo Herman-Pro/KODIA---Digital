@@ -1,49 +1,470 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KODIA - Digital</title>
+  <!-- SEO de base -->
+  <meta name="description"
+    content="KODIA Agency accompagne les indépendants, PME et startups béninois à avoir une présence en ligne moderne, rapide et abordable.">
+  <meta name="author" content="KODIA Agency">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph — aperçu sur WhatsApp, Facebook, LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KODIA Agency — Solutions Digitales sur mesure">
+  <meta property="og:description"
+    content="Agence web béninoise spécialisée dans les sites sur mesure pour PME et startups.">
+  <meta property="og:image" content="assets/images/Logo_KODIA_sur_fond_blanc.webp">
+  <meta property="og:url" content="https://kodia.agency">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KODIA Agency — Solutions Digitales">
+  <meta name="twitter:description" content="Agence web béninoise spécialisée dans les sites sur mesure.">
+  <meta name="twitter:image" content="assets/images/Logo_KODIA_sur_fond_blanc.webp">
+
+  <title>KODIA Agency — Solutions Digitales sur mesure</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon_KODIA.webp">
+  <link rel="apple-touch-icon" href="assets/images/favicon_KODIA.webp">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
-  
+
   <!-- Header -->
-  <header class="container">
+  <header class="header header--shadow">
+    <div class="container">
+      <nav class="navbar">
 
-    <!-- Navbar -->
-    <nav class="navbar">
+        <a href="index.html" class="navbar__logo">
+          <img src="assets/images/Logo KODIA sur fond blanc.webp" alt="Logo KODIA" class="navbar__logo-image">
+        </a>
 
-      <!-- LOGO  -->
-      <a href="index.html" class="navbar--logo">
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#accueil" class="navbar__link link-underline">Accueil</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__link link-underline">À propos</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#services" class="navbar__link link-underline">Services</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contact" class="navbar__link link-underline">Contacts</a>
+          </li>
+          <li class="navbar__item">
+            <a href="https://wa.me/message/NFLMQ4FCMNJLP1" target="_blank" rel="noopener noreferrer"
+              class="btn btn--primary">Demander un devis</a>
+          </li>
+        </ul>
 
-        <!-- Image -->
-        <img src="assets/images/Logo_KODIA_sur_fond_blanc.png" alt="Logo_KODIA_sur_fond_blanc" class="logo--image">
+        <button class="navbar__hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span class="navbar__icon navbar__icon--menu">☰</span>
+          <span class="navbar__icon navbar__icon--close">✕</span>
+        </button>
 
-      </a>
-  
-      <!-- Menu -->
-      <ul class="navbar--menu">
-
-        <!-- Links -->
-        <li><a href="#about" title="Acceuil" class="menu--link active-link">Acceuil</a></li>
-        <li><a href="#about" title="A propos" class="menu--link">À propos</a></li>
-        <li><a href="#services" title="Services" class="menu--link">Services</a></li>
-        <li><a href="#contact" title="Contacts" class="menu--link">Contacts</a></li>
-        <li><a href="#contact" title="Demander un devis" class="btn">Demander un devis</a></li>
-
-      </ul>
-  
-      <!-- Mobile Menu -->
-      <div class="navbar--hamburgerMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-    </nav>
-
+      </nav>
+    </div>
   </header>
 
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero section" id="accueil">
+      <div class="container">
+        <div class="two-col">
+
+          <div class="two-col__left animate">
+            <h1 class="hero__title">
+              Solutions sur mesure<br>
+              pour votre entreprise
+            </h1>
+            <p class="hero__description">
+              KODIA accompagne les indépendants,
+              PME et startups béninois à avoir une présence
+              en ligne moderne, rapide et abordable.
+            </p>
+            <div class="hero__actions">
+              <a href="https://wa.me/message/NFLMQ4FCMNJLP1" target="_blank" rel="noopener noreferrer"
+                class="btn btn--primary">
+                Demander un devis gratuit
+              </a>
+            </div>
+          </div>
+
+          <div class="two-col__right animate">
+            <img src="assets/images/hero-team.webp" alt="L'équipe KODIA, experts en solutions digitales"
+              class="hero__image">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="services-intro section--sm section--gray">
+      <div class="container">
+
+        <div class="section__header">
+          <h2 class="section__title section__title--lined animate">Nos Services</h2>
+        </div>
+
+        <ul class="three-col" role="list">
+
+          <li class="icon-card icon-card--centered animate">
+            <div class="icon-card__icon-wrap">
+              <i class="fi fi-br-chart-line-up icon-card__icon"></i>
+            </div>
+            <div class="icon-card__body">
+              <h3 class="icon-card__title">Stratégie Digitale</h3>
+            </div>
+          </li>
+
+          <li class="icon-card icon-card--centered animate">
+            <div class="icon-card__icon-wrap">
+              <i class="fi fi-br-diagram-project icon-card__icon"></i>
+            </div>
+            <div class="icon-card__body">
+              <h3 class="icon-card__title">Gestion de Projets</h3>
+            </div>
+          </li>
+
+          <li class="icon-card icon-card--centered animate">
+            <div class="icon-card__icon-wrap">
+              <i class="fi fi-br-headset icon-card__icon"></i>
+            </div>
+            <div class="icon-card__body">
+              <h3 class="icon-card__title">Support & Conseil</h3>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Pourquoi nous -->
+    <section class="why-us section--sm">
+      <div class="container">
+
+        <div class="section__header">
+          <h2 class="section__title section__title--underlined animate">Pourquoi choisir KODIA ?</h2>
+        </div>
+
+        <ul class="three-col" role="list">
+
+          <li class="feature-item animate">
+            <div class="feature-item__header">
+              <i class="fi fi-br-check feature-item__icon"></i>
+              <h3 class="feature-item__title">Livraison rapide</h3>
+            </div>
+            <p class="feature-item__desc">
+              Vos projets livrés dans les délais convenus,
+              sans mauvaises surprises.
+            </p>
+          </li>
+
+          <li class="feature-item animate">
+            <div class="feature-item__header">
+              <i class="fi fi-br-check feature-item__icon"></i>
+              <h3 class="feature-item__title">Code propre et sur mesure</h3>
+            </div>
+            <p class="feature-item__desc">
+              Pas de templates. Chaque site est codé
+              de zéro pour vos besoins spécifiques.
+            </p>
+          </li>
+
+          <li class="feature-item animate">
+            <div class="feature-item__header">
+              <i class="fi fi-br-check feature-item__icon"></i>
+              <h3 class="feature-item__title">Accompagnement personnalisé</h3>
+            </div>
+            <p class="feature-item__desc">
+              On reste disponible avant, pendant et après
+              la livraison de votre projet.
+            </p>
+          </li>
+
+        </ul>
+
+        <div class="why-us__cta">
+          <a href="https://wa.me/message/NFLMQ4FCMNJLP1" target="_blank" rel="noopener noreferrer"
+            class="btn btn--primary">Demander un devis</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="about section--sm section--gray" id="about">
+      <div class="container">
+
+        <div class="section__header section__header--left">
+          <h2 class="section__title section__title--underlined animate">À Propos de KODIA</h2>
+        </div>
+
+        <ul class="three-col" role="list">
+
+          <li class="info-card animate">
+            <h3 class="info-card__title underlined">Qui sommes-nous ?</h3>
+            <p class="info-card__text">
+              KODIA est une agence web béninoise fondée
+              par un développeur front-end passionné,
+              dédiée aux entreprises locales qui veulent
+              exister et grandir en ligne.
+            </p>
+          </li>
+
+          <li class="info-card animate">
+            <h3 class="info-card__title underlined">Notre mission</h3>
+            <p class="info-card__text">
+              Rendre le web accessible à toutes les
+              entreprises béninoises, quelle que soit
+              leur taille ou leur budget.
+            </p>
+          </li>
+
+          <li class="info-card animate">
+            <h3 class="info-card__title underlined">Nos valeurs</h3>
+            <ul class="value-list" role="list">
+              <li class="value-list__item">
+                <i class="fi fi-br-check value-list__icon"></i>
+                Professionnalisme.
+              </li>
+              <li class="value-list__item">
+                <i class="fi fi-br-check value-list__icon"></i>
+                Proximité.
+              </li>
+              <li class="value-list__item">
+                <i class="fi fi-br-check value-list__icon"></i>
+                Confiance.
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner section--sm">
+      <div class="container">
+        <h2 class="section__title section__title--lined animate">Prêt à passer à l'action ?</h2>
+        <div class="why-us__cta">
+          <a href="https://wa.me/message/NFLMQ4FCMNJLP1" target="_blank" rel="noopener noreferrer"
+            class="btn btn--primary">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nos Services -->
+    <section class="services section--sm" id="services">
+      <div class="container">
+
+        <div class="section__header section__header--left">
+          <h2 class="section__title animate">Nos Services</h2>
+        </div>
+
+        <ul class="two-col-grid" role="list">
+
+          <li class="icon-card animate">
+            <div class="icon-card__icon-wrap">
+              <i class="fi fi-br-chart-line-up icon-card__icon"></i>
+            </div>
+            <div class="icon-card__body">
+              <h3 class="icon-card__title">Stratégie Digitale</h3>
+              <p class="icon-card__desc">Boostez votre présence en ligne.</p>
+            </div>
+          </li>
+
+          <li class="icon-card animate">
+            <div class="icon-card__icon-wrap">
+              <i class="fi fi-br-diagram-project icon-card__icon"></i>
+            </div>
+            <div class="icon-card__body">
+              <h3 class="icon-card__title">Gestion de Projets</h3>
+              <p class="icon-card__desc">Pilotez vos projets efficacement.</p>
+            </div>
+          </li>
+
+          <li class="icon-card animate">
+            <div class="icon-card__icon-wrap">
+              <i class="fi fi-br-headset icon-card__icon"></i>
+            </div>
+            <div class="icon-card__body">
+              <h3 class="icon-card__title">Support & Conseil</h3>
+              <p class="icon-card__desc">Accompagnement et assistance.</p>
+            </div>
+          </li>
+
+          <li class="icon-card animate">
+            <div class="icon-card__icon-wrap">
+              <i class="fi fi-br-settings icon-card__icon"></i>
+            </div>
+            <div class="icon-card__body">
+              <h3 class="icon-card__title">Optimisation Processus</h3>
+              <p class="icon-card__desc">Améliorez votre productivité.</p>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="why-us__cta">
+          <a href="https://wa.me/message/NFLMQ4FCMNJLP1" target="_blank" rel="noopener noreferrer"
+            class="btn btn--primary">Demander un devis</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container">
+
+        <div class="section__header section__header--left">
+          <h2 class="section__title animate">Contactez-nous</h2>
+          <p class="section__subtitle" style="margin-top: var(--space-2)">
+            Un projet ? Une question ?
+            Écrivez-nous, on vous répond sous 24h.
+          </p>
+        </div>
+
+        <div class="two-col-grid">
+
+          <div class="two-col__left">
+            <form class="contact-form animate" action="https://formspree.io/f/xeerrzyl" method="POST" novalidate>
+
+              <div class="form-group">
+                <label for="name" class="form-label">Nom</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Votre nom" autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com"
+                  autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Téléphone</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="01 23 45 67 89"
+                  autocomplete="tel">
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-textarea" rows="5"
+                  placeholder="Décrivez votre projet..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full">
+                Envoyer la demande
+              </button>
+
+            </form>
+          </div>
+
+
+          <div class="contact-info-card animate">
+
+            <h3 class="contact-info__title underlined">Contacts</h3>
+
+            <div class="contact-info__item">
+              <span class="contact-info__label">Email :</span>
+              <a href="mailto:contact@kodia.fr" class="contact-info__value contact-info__value--link">
+                contact@kodia.fr
+              </a>
+            </div>
+
+            <div class="contact-info__item">
+              <span class="contact-info__label">Téléphone :</span>
+              <span class="contact-info__value">+229 01 23 45 67 89</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <!-- Colonne 1 — Brand -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/images/Logo_KODIA_sur_fond_noir.webp" alt="Logo KODIA" class="footer__logo-image">
+          </a>
+          <p class="footer__tagline">
+            Experts en solutions digitales pour les PME locales.
+          </p>
+        </div>
+
+        <!-- Colonne 2 — Navigation -->
+        <nav class="footer__nav" aria-label="Navigation footer">
+          <h4 class="footer__nav-title">Liens</h4>
+          <ul role="list" class="footer__nav-list">
+            <li>
+              <a href="#accueil" class="footer__nav-link">Accueil</a>
+            </li>
+            <li>
+              <a href="#about" class="footer__nav-link">À propos</a>
+            </li>
+            <li>
+              <a href="#services" class="footer__nav-link">Services</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer__nav-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Colonne 3 — Contact -->
+        <div class="footer__contact">
+          <h4 class="footer__nav-title">Contact</h4>
+          <ul role="list" class="footer__contact-list">
+            <li class="footer__contact-item">
+              <i class="fi fi-br-envelope footer__contact-icon"></i>
+              <a href="mailto:kodia.digital@gmail.com" class="footer__nav-link">
+                kodia.digital@gmail.com
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <i class="fi fi-br-phone-call footer__contact-icon"></i>
+              <a href="https://wa.me/message/NFLMQ4FCMNJLP1" target="_blank" rel="noopener noreferrer"
+                class="footer__nav-link">
+                01 52 14 49 49
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bas du footer -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © 2025 KODIA Agency — Tous droits réservés
+          Cotonou, Bénin 🇧🇯
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,200 @@
+/* ============================================================
+   FOOTER
+   Fichier : assets/css/components/footer.css
+   ============================================================ */
+
+.footer {
+  background-color: var(--color-bg-dark, #0f172a);
+  color: var(--color-text-inverse, #ffffff);
+  padding-block: var(--space-16);
+}
+
+/*
+  background-color: #0f172a → bleu nuit très sombre.
+  Pas noir pur (#000) — trop brutal.
+  Ce bleu nuit est dans la famille chromatique du primary
+  sans être aussi saturé. Cohérence avec l'identité KODIA.
+
+  color: white → texte inverse sur fond sombre.
+  On définit la couleur ici une seule fois — les enfants héritent.
+  On ne remet pas color sur chaque élément enfant.
+*/
+
+
+/* ----------------------------------------------------------
+   TOP — Grille 3 colonnes
+---------------------------------------------------------- */
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  padding-bottom: var(--space-10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/*
+  1 colonne mobile → empilement naturel.
+
+  border-bottom → ligne séparatrice entre le contenu
+  et le copyright en bas.
+  rgba(255,255,255, 0.1) → blanc très transparent.
+  Une bordure blanche pleine serait trop agressive sur fond sombre.
+  0.1 d'opacité = subtil et élégant.
+*/
+
+@media (min-width: 48rem) {
+  .footer__top {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  /*
+    3 colonnes sur desktop :
+    2fr pour la brand → elle prend plus de place, elle a plus de contenu.
+    1fr + 1fr pour nav et contact → colonnes égales.
+  */
+}
+
+
+/* ----------------------------------------------------------
+   BRAND — Logo + tagline
+---------------------------------------------------------- */
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer__logo-image {
+  width: 7.5rem;
+}
+
+@media (min-width: 48rem) {
+  .footer__logo-image {
+    width: 9rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .footer__logo-image {
+      width: 11.3rem;
+    }
+}
+
+/*
+  filter: brightness(0) invert(1) → rend le logo blanc.
+  brightness(0) = tout en noir d'abord.
+  invert(1) = inverse → tout devient blanc.
+
+  Pourquoi ce filtre et pas une version blanche du logo ?
+  → On n'a pas besoin d'un 2ème fichier image.
+  Une seule image, un filtre CSS = logo blanc automatique.
+  Si le logo change, on ne gère qu'un seul fichier.
+*/
+
+.footer__tagline {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  max-width: 20rem;
+}
+
+/*
+  rgba(255,255,255, 0.6) → blanc à 60% d'opacité.
+  Moins important que les titres (blanc plein).
+  Crée une hiérarchie visuelle même sur fond sombre.
+
+  max-width: 20rem → on évite des lignes trop longues
+  dans la colonne brand qui est plus large (2fr).
+*/
+
+
+/* ----------------------------------------------------------
+   NAV & CONTACT — Colonnes de liens
+---------------------------------------------------------- */
+
+.footer__nav,
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer__nav-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/*
+  text-transform: uppercase + letter-spacing → style classique
+  pour les titres de colonnes de footer.
+  Crée une distinction claire entre le titre et les liens.
+  letter-spacing: 0.08em → légèrement espacé, plus lisible en uppercase.
+*/
+
+.footer__nav-list,
+.footer__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer__nav-link {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-base);
+}
+
+.footer__nav-link:hover {
+  color: var(--color-white);
+}
+
+/*
+  État par défaut → blanc 60% (atténué).
+  Hover → blanc plein.
+  Transition douce — cohérent avec le reste du kit.
+*/
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer__contact-icon {
+  display: flex;
+  font-size: 0.875rem;
+  color: var(--color-primary-500);
+  flex-shrink: 0;
+}
+
+/*
+  Icône en primary-500 → seule touche de couleur dans le footer.
+  Crée un point d'attention visuel sur les infos de contact.
+  Cohérent avec le reste du kit où primary = action/interaction.
+*/
+
+
+/* ----------------------------------------------------------
+   BOTTOM — Copyright
+---------------------------------------------------------- */
+
+.footer__bottom {
+  padding-top: var(--space-8);
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/*
+  0.4 d'opacité → copyright très discret.
+  C'est une information légale, pas du contenu principal.
+  Hiérarchie visuelle : brand > liens > contact > copyright.
+*/

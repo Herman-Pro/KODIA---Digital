@@ -1,0 +1,69 @@
+/* ============================================================
+   HERO
+   Fichier : assets/css/patterns/hero.css
+
+   Ce fichier gère UNIQUEMENT :
+   - l'espacement de la section hero
+   - les styles typographiques propres au hero
+   - le traitement visuel de l'image hero
+
+   Le layout 2 colonnes est dans layout/grid.css
+   ============================================================ */
+
+.hero {
+  padding-top: calc(var(--space-16) + 4rem);
+  padding-bottom: var(--space-16);
+  background-color: var(--color-gray-200);
+  overflow: hidden;
+}
+
+/* .two-col__left {
+  align-items: center;
+} */
+
+.hero__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  line-height: 1.2;
+}
+
+.hero__description {
+  color: var(--color-gray-700);
+  line-height: 1.6;
+  max-width: 32rem;
+}
+
+.hero__image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  position: relative;
+  bottom: var(--space-6);
+  transform: scale(1.4);
+  transform-origin: center top;
+}
+
+
+@media (min-width: 48rem) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__image {
+    max-height: 28rem;
+    margin-top: -5rem;
+    transform: scale(1.7);
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero__title {
+    font-size: 3rem;
+  }
+
+    .hero__image {
+      margin-top: -2rem;
+      transform: scale(1.5);
+    }
+}

@@ -1,0 +1,22 @@
+/* ============================================================
+   HOME — Styles spécifiques à la page d'accueil
+   Fichier : assets/css/patterns/home.css
+
+   Contient uniquement les styles qui appartiennent
+   à des sections précises de l'accueil.
+   Les composants réutilisables sont dans components/.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   WHY US — Bouton CTA centré sous la grille
+---------------------------------------------------------- */
+
+.why-us{
+   background-color: var(--color-gray-100);
+}
+.why-us__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-10);
+}
